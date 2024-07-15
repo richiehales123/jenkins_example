@@ -3,7 +3,7 @@ pipeline {
     stages {
       stage("Installing Node") {
         steps {
-          nodejs(cacheLocationStrategy: workspace("sonar"), nodeJSInstallationName: 'NodeJs') {
+          nodejs(cacheLocationStrategy: workspace(), nodeJSInstallationName: 'NodeJs') {
           }
         }
       }
@@ -21,6 +21,11 @@ pipeline {
               echo 'Cloning the repository'
               sh 'git clone https://github.com/richiehales123/jenkins_example.git'
           }
+      }
+      stage("Moving NodeJs Directory") {
+        steps {
+          sh 'cp -r jenkins.plugins.nodejs.tools.NodeJSInstallation/ /var/jenkins_home/workspace/sonar'
+        }
       }
       stage('Sonarqube testing') { 
           steps {
