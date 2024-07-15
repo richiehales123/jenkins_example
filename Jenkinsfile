@@ -1,6 +1,12 @@
 pipeline {
     agent any 
     stages {
+      stage("Installing Node") {
+        steps {
+          nodejs(cacheLocationStrategy: workspace(), nodeJSInstallationName: 'NodeJs') {
+          }
+        }
+      }
         stage('Clone the repo') { 
             steps {
                 echo 'Checking if repository directory exists'
