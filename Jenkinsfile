@@ -24,7 +24,7 @@ pipeline {
       }
       stage("Moving NodeJs Directory") {
         steps {
-          sh 'cp -r /tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/ /workspace/sonar'
+          sh 'cp -r tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/ workspace/sonar'
         }
       }
       stage('Sonarqube testing') { 
