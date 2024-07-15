@@ -28,6 +28,7 @@ Email Address = richiehales@outlook.com
 https://www.youtube.com/watch?v=EQfzQ0kYI84&t=24s
 
 
-
+### Setup network in docker for containers to communicate
+See docker_network_setup.md
 
 

@@ -14,8 +14,5 @@ password = admin
 username = admin
 password = c0ntr0l"
 
-
-
-squ_f6074d6af4010bcead26432f6fa09c0d66132a24
-
-sqp_9c16ed3e7e00e9900c7dc1490a60e4da50e53339
+### Setup network in docker for containers to communicate
+See docker_network_setup.md
