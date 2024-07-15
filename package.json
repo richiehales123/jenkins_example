@@ -1,0 +1,17 @@
+{
+  "name": "docker_setup",
+  "version": "1.0.0",
+  "description": "https://www.youtube.com/watch?v=pTFZFxd4hOI https://www.youtube.com/watch?v=gAkwW2tuIqE&t=161s   -  Run nodejs backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
