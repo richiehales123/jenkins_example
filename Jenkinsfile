@@ -18,14 +18,14 @@ pipeline {
           }
       }
       stage("Install Node.js in jenkins_example") {
-            steps {
-                dir('jenkins_example') {
-                    nodejs(nodeJSInstallationName: 'NodeJs') {
-                        echo 'Node.js installed in jenkins_example directory.'
-                    }
-                }
-            }
-        }
+          steps {
+              dir('jenkins_example') {
+                  nodejs(nodeJSInstallationName: 'NodeJs') {
+                      echo 'Node.js installed in jenkins_example directory.'
+                  }
+              }
+          }
+      }
       stage('Sonarqube testing') { 
           steps {
                 script {
