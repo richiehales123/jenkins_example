@@ -41,7 +41,7 @@ pipeline {
           script {
               sh 'id'
               echo 'Building the image with Buildah'
-              sh 'bash -c "buildah bud -t richieimage:1.0.0"'
+              sh 'sudo buildah bud -t richieimage:1.0.0'
           }
         }
       }
