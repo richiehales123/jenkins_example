@@ -40,7 +40,7 @@ pipeline {
         steps {
           script {
               echo 'Building the image with Buildah'
-              sh 'buildah build -t richieimage:1.0.0'
+              sh 'sudo bash -c "buildah build -t richieimage:1.0.0"'
           }
         }
       }
