@@ -1,12 +1,7 @@
 pipeline {
     agent any 
     stages {
-      stage("Installing Node") {
-        steps {
-          nodejs(cacheLocationStrategy: workspace(), nodeJSInstallationName: 'NodeJs') {
-          }
-        }
-      }
+
       stage('Clone the repo') { 
           steps {
               echo 'Checking if repository directory exists'
@@ -22,11 +17,15 @@ pipeline {
               sh 'git clone https://github.com/richiehales123/jenkins_example.git'
           }
       }
-      stage("Moving NodeJs Directory") {
-        steps {
-          sh 'cp -r /var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/ /var/jenkins_home/workspace/sonar'
+      stage("Install Node.js in jenkins_example") {
+            steps {
+                dir('jenkins_example') {
+                    nodejs(nodeJSInstallationName: 'NodeJs') {
+                        echo 'Node.js installed in jenkins_example directory.'
+                    }
+                }
+            }
         }
-      }
       stage('Sonarqube testing') { 
           steps {
                 script {
