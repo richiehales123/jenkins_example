@@ -1,11 +1,10 @@
 pipeline {
-  agent {
+    agent {
         docker {
             image 'buildah/buildah'
             args '-u root --privileged'  // Run as root with privileged flag
         }
     }
-    agent any 
     stages {
 
       stage('Clone the repo') { 
