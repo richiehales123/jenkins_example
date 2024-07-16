@@ -24,7 +24,7 @@ Email Address = richiehales@outlook.com
 
 
 ## Setup pipeline - 2
-### Basic example of pipeline setup - clone from github
+### Basic example of pipeline setup - clone from github - 14mins
 https://www.youtube.com/watch?v=EQfzQ0kYI84&t=24s
 
 
