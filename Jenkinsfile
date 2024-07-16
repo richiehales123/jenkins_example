@@ -36,6 +36,14 @@ pipeline {
               }
           }
       }
+      stage('Build Image with Buildah') {
+        steps {
+          script {
+              echo 'Building the image with Buildah'
+              sh 'buildah build -t richieimage:1.0.0'
+          }
+        }
+      }
       stage('Deploy') { 
           steps {
               echo 'goodbye' 
