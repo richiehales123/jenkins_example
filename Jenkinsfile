@@ -39,6 +39,7 @@ pipeline {
       stage('Build Image with Buildah') {
         steps {
           script {
+              sh 'id'
               echo 'Building the image with Buildah'
               sh 'sudo bash -c "buildah build -t richieimage:1.0.0"'
           }
