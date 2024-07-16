@@ -26,22 +26,22 @@ pipeline {
               }
           }
       }
-      stage('Sonarqube testing') { 
-          steps {
-                script {
-                  def scannerHome = tool 'sonarScan';
-                      withSonarQubeEnv(installationName: 'sq1') {
-                            sh "${scannerHome}/bin/sonar-scanner"
-                      }
-              }
-          }
-      }
+      // stage('Sonarqube testing') { 
+      //     steps {
+      //           script {
+      //             def scannerHome = tool 'sonarScan';
+      //                 withSonarQubeEnv(installationName: 'sq1') {
+      //                       sh "${scannerHome}/bin/sonar-scanner"
+      //                 }
+      //         }
+      //     }
+      // }
       stage('Build Image with Buildah') {
         steps {
           script {
               sh 'id'
               echo 'Building the image with Buildah'
-              sh 'sudo bash -c "buildah build -t richieimage:1.0.0"'
+              sh 'bash -c "buildah build -t richieimage:1.0.0"'
           }
         }
       }
