@@ -24,3 +24,11 @@ https://github.com/klo2k/nexus3-docker
 3. email anonymous@example.org
 4. Roles - add role created in step 2 to granted roles
 5. SAVE
+
+
+## Edit Buildah config file
+1. `vim /etc/containers/registries.conf`
+2. Locate the [[registry]] section and add your HTTP registry. If the section does not exist, create it:
+    `[[registry]]`
+    `location = "172.18.0.4:8085"`
+    `insecure = true`
