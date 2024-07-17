@@ -4,7 +4,7 @@
 https://www.youtube.com/watch?v=pMO26j2OUME&t=1s
 
 ### Install / Run Jenkins
-#### Setups Jenkins Ports and creates a volume
+#### Setups Jenkins Ports and creates a volume from the jenkins/jenkins image
 docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkings_home jenkins/jenkins
 
 ## Run jenkins logs with image id
