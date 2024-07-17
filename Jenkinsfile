@@ -55,9 +55,9 @@ pipeline {
         }
       }
     }
-    stage('Deploy') { 
+    stage('Completed') { 
       steps {
-        echo 'goodbye' 
+        echo 'Jenkins Completed' 
       }
     }
   }
