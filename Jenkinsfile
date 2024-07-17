@@ -6,15 +6,18 @@ pipeline {
         git branch: 'main', url: 'https://github.com/richiehales123/jenkins_example.git'
       }
     }
+
+    // ****************** Run below stage once *******************
+    // log in to conatianer and copy nodeJs to correct directory for sonarqube
+    // cp -r tools/jenkins.plugins.nodejs.tools.NodeJSInstallation workspace/docker_jenkins_sonarqube
     // stage("Install Node.js in jenkins_example") {
     //   steps {
-    //     dir('docker_jenkins_sonarqube') {
     //       nodejs(nodeJSInstallationName: 'NodeJs') {
     //         echo 'Node.js installed in jenkins_example directory.'
     //       }
-    //     }
     //   }
     // }
+
     stage('Sonarqube testing') { 
       steps {
         script {
