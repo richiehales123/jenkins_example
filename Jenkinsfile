@@ -8,8 +8,8 @@ pipeline {
     }
 
     // ****************** Run below stage once *******************
-    // log in to conatianer and copy nodeJs to correct directory for sonarqube
-    // cp -r tools/jenkins.plugins.nodejs.tools.NodeJSInstallation workspace/docker_jenkins_sonarqube
+    // log in to conatianer and copy nodeJs to correct directory for sonarqube (check dirs for correct names - if success etc)
+    // root@20a34e39112c:/var/jenkins_home#  cp -r tools/jenkins.plugins.nodejs.tools.NodeJSInstallation workspace/docker_jenkins_sonarqube
     // stage("Install Node.js in jenkins_example") {
     //   steps {
     //       nodejs(nodeJSInstallationName: 'NodeJs') {
