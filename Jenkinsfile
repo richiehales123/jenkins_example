@@ -37,6 +37,24 @@ pipeline {
         }
       }
     }
+    stage('Tagging the image with Buildah') {
+      steps {
+        script {
+          sh 'id'
+          echo 'Tagging the image with Buildah'
+          sh 'buildah tag richieimage:1.0.0 http://localhost:8085/richieimage:latest'
+        }
+      }
+    }
+    stage('Pushing To Nexus') {
+      steps {
+        script {
+          sh 'id'
+          echo 'Pushing To Nexus Repo'
+          sh 'buildah push http://localhost:8085/richieimage:latest'
+        }
+      }
+    }
     stage('Deploy') { 
       steps {
         echo 'goodbye' 
