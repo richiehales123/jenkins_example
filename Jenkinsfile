@@ -8,7 +8,7 @@ pipeline {
     }
     stage("Install Node.js in jenkins_example") {
       steps {
-        dir('/workspace/docker_jenkins_sonarqube') {
+        dir('var/jenkins_home/workspace/docker_jenkins_sonarqube') {
           nodejs(nodeJSInstallationName: 'NodeJs') {
             echo 'Node.js installed in jenkins_example directory.'
           }
